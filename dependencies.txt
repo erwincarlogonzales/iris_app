@@ -1,6 +1,8 @@
 pip install streamlit, scikit-learn, matplotlib
 check streamlit using the terminal: streamlit hello
 
-import numpy as np
-import streamlit as st
-from sklearn import datasets
+numpy
+matplotlib
+seaborn
+streamlit
+scikit-learn
