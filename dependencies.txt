@@ -2,7 +2,7 @@ pip install streamlit, scikit-learn, matplotlib
 check streamlit using the terminal: streamlit hello
 
 numpy
-matplotlib
+matplotlib.pyplot
 seaborn
 streamlit
 scikit-learn
