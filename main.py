@@ -1,7 +1,7 @@
 # import dependencies
 import numpy as np
-# import matplotlib.pyplot as plt
-# import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 import streamlit as st
 
 # import datasets
@@ -115,38 +115,38 @@ st.write(f'Accuracy {acc*100:.2f}%')
 
 # create visualization
 # PCA for dimensionality reduction
-# pca = PCA(2)
-# X_projected = pca.fit_transform(X)
+pca = PCA(2)
+X_projected = pca.fit_transform(X)
 
-# # Get the feature names
-# feature_names = datasets.load_iris().feature_names if dataset == 'Iris' else datasets.load_wine().feature_names
+# Get the feature names
+feature_names = datasets.load_iris().feature_names if dataset == 'Iris' else datasets.load_wine().feature_names
 
-# # Identify the most influential feature for each principal component
-# most_influential_feature_x1 = feature_names[np.argmax(np.abs(pca.components_[0]))]
-# most_influential_feature_x2 = feature_names[np.argmax(np.abs(pca.components_[1]))]
+# Identify the most influential feature for each principal component
+most_influential_feature_x1 = feature_names[np.argmax(np.abs(pca.components_[0]))]
+most_influential_feature_x2 = feature_names[np.argmax(np.abs(pca.components_[1]))]
 
-# # Displaying the most influential features for x1 and x2
-# st.write(f'Most influential feature for PCA Feature 1: {most_influential_feature_x1}')
-# st.write(f'Most influential feature for PCA Feature 2: {most_influential_feature_x2}')
+# Displaying the most influential features for x1 and x2
+st.write(f'Most influential feature for PCA Feature 1: {most_influential_feature_x1}')
+st.write(f'Most influential feature for PCA Feature 2: {most_influential_feature_x2}')
 
-# x1 = X_projected[:, 0]
-# x2 = X_projected[:, 1]
+x1 = X_projected[:, 0]
+x2 = X_projected[:, 1]
 
-# # Scatter plot for PCA features x1 and x2 using Seaborn
-# fig, ax = plt.subplots()
-# sns.scatterplot(x=x1, y=x2, hue=y, palette='viridis', ax=ax)
-# ax.set_xlabel(f'PCA Feature 1 ({most_influential_feature_x1})')
-# ax.set_ylabel(f'PCA Feature 2 ({most_influential_feature_x2})')
-# st.pyplot(fig)
+# Scatter plot for PCA features x1 and x2 using Seaborn
+fig, ax = plt.subplots()
+sns.scatterplot(x=x1, y=x2, hue=y, palette='viridis', ax=ax)
+ax.set_xlabel(f'PCA Feature 1 ({most_influential_feature_x1})')
+ax.set_ylabel(f'PCA Feature 2 ({most_influential_feature_x2})')
+st.pyplot(fig)
 
-# # Histogram for PCA feature x1 using Seaborn
-# fig, ax = plt.subplots()
-# sns.histplot(x1, kde=True, ax=ax)
-# ax.set_title(f'PCA Feature 1 ({most_influential_feature_x1}) Histogram')
-# st.pyplot(fig)
+# Histogram for PCA feature x1 using Seaborn
+fig, ax = plt.subplots()
+sns.histplot(x1, kde=True, ax=ax)
+ax.set_title(f'PCA Feature 1 ({most_influential_feature_x1}) Histogram')
+st.pyplot(fig)
 
-# # Histogram for PCA feature x2 using Seaborn
-# fig, ax = plt.subplots()
-# sns.histplot(x2, kde=True, ax=ax)
-# ax.set_title(f'PCA Feature 2 ({most_influential_feature_x2}) Histogram')
-# st.pyplot(fig)
+# Histogram for PCA feature x2 using Seaborn
+fig, ax = plt.subplots()
+sns.histplot(x2, kde=True, ax=ax)
+ax.set_title(f'PCA Feature 2 ({most_influential_feature_x2}) Histogram')
+st.pyplot(fig)

@@ -1,5 +1,5 @@
 numpy
-# matplotlib.pyplot
-# seaborn
+matplotlib.pyplot
+seaborn
 streamlit
 scikit-learn
