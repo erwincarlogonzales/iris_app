@@ -1,6 +1,6 @@
 # import dependencies
 import numpy as np
-import matplotlib as plt
+# import matplotlib as plt
 import seaborn as sns
 import streamlit as st
 
