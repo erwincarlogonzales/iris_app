@@ -13,10 +13,10 @@ Features:
 - Real-time Predictions: Get predictions with different classifiers and instantly view the accuracy.
 
 Getting Started:
-1. Installation: Ensure you have all the required dependencies installed. Use the provided dependencies.txt file with the command:
-pip install -r dependencies.txt
+1. Installation: Ensure you have all the required dependencies installed. Use the provided requirements.txt file with the command:
+pip install -r requirements.txt
 2. Running the App: Navigate to the project directory and run:
-streamlit run main.py
+streamlit run main.py on the terminal
 3. Choose & Explore: Use the sidebar to select datasets and classifiers, adjust model parameters, and let the magic happen!
 
 Contribute:
